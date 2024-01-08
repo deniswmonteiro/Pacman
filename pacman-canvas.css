@@ -116,7 +116,7 @@ audio {display: block; }
 
 /* ---------- Controls ------------------------*/
 
-.controls { text-align: center; margin-top: 30px;}
+.controls { text-align: center; margin-top: 10px;}
 .controls-section { 
 	height: auto; 
 	width: 47%; 

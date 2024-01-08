@@ -1507,20 +1507,10 @@ function geronimo() {
 			inky.draw(context);
 			clyde.draw(context);
 
-
-			// Pac Man
-			// context.beginPath();
-			// context.fillStyle = "Yellow";
-			// context.strokeStyle = "Yellow";
-			// context.arc(pacman.posX + pacman.radius, pacman.posY + pacman.radius, pacman.radius, pacman.angle1 * Math.PI, pacman.angle2 * Math.PI);
-			// context.lineTo(pacman.posX + pacman.radius, pacman.posY + pacman.radius);
-			// context.stroke();
-			// context.fill();
-
 			context.beginPath();
 			context.fillStyle = "Transparent";
 			context.strokeStyle = "#6EB6E3";
-			context.lineWidth = 14;
+			context.lineWidth = 8;
 			context.arc(pacman.posX + pacman.radius, pacman.posY + pacman.radius, pacman.radius, pacman.angle1 * Math.PI, pacman.angle2 * Math.PI);
 			context.stroke();
 			context.fill();
