@@ -525,7 +525,8 @@ function geronimo() {
 		this.buildWalls = function () {
 			if (this.ghostMode === 0) game.wallColor = "Blue";
 			else game.wallColor = "Red";
-			canvas_walls = document.createElement('canvas');
+
+			canvas_walls = document.createElement("canvas");
 			canvas_walls.width = game.canvas.width;
 			canvas_walls.height = game.canvas.height;
 			context_walls = canvas_walls.getContext("2d");
@@ -577,8 +578,8 @@ function geronimo() {
 			buildWall(context_walls, 16, 5, 2, 1);
 			buildWall(context_walls, 13, 5, 2, 1);
 
-			buildWall(context_walls, 0, 7, 2, 2);
-			buildWall(context_walls, 16, 7, 2, 2);
+			buildWall(context_walls, 0, 7, 2, 1);
+			buildWall(context_walls, 16, 7, 2, 1);
 			buildWall(context_walls, 3, 7, 2, 2);
 			buildWall(context_walls, 13, 7, 2, 2);
 
@@ -590,8 +591,7 @@ function geronimo() {
 			buildWall(context_walls, 2, 10, 1, 1);
 			buildWall(context_walls, 15, 10, 1, 1);
 			buildWall(context_walls, 7, 10, 4, 1);
-			buildWall(context_walls, 4, 11, 2, 2);
-			buildWall(context_walls, 12, 11, 2, 2);
+
 			/* ------------ End Pre-Build Walls  ------------ */
 		};
 
@@ -801,7 +801,6 @@ function geronimo() {
 		}
 
 		this.checkCollision = function () {
-
 			/* Check Back to Home */
 			if (this.dead && (this.getGridPosX() == this.startPosX / 30) && (this.getGridPosY() == this.startPosY / 30)) this.reset();
 			else {
@@ -1078,7 +1077,6 @@ function geronimo() {
 				if ((this.dirX == 1) && (gridAheadX < 17)) gridAheadX += 1;
 				if ((this.dirY == 1) && (gridAheadY < 12)) gridAheadY += 1;
 				var fieldAhead = game.getMapContent(gridAheadX, gridAheadY);
-
 
 				/*	Check Pill Collision			*/
 				if ((field === "pill") || (field === "powerpill")) {
