@@ -1402,22 +1402,25 @@ function geronimo() {
 		});
 
 		// Mobile Control Buttons
-		$(document).on('touchend mousedown', '#up', function (event) {
-			event.preventDefault();
+		$("#up").on("tapstart", function(event) {
+            event.preventDefault();
 			pacman.directionWatcher.set(up);
-		});
-		$(document).on('touchend mousedown', '#down', function (event) {
-			event.preventDefault();
+        });
+
+		$("#down").on("tapstart", function(event) {
+            event.preventDefault();
 			pacman.directionWatcher.set(down);
-		});
-		$(document).on('touchend mousedown', '#left', function (event) {
-			event.preventDefault();
+        });
+
+		$("#left").on("tapstart", function(event) {
+            event.preventDefault();
 			pacman.directionWatcher.set(left);
-		});
-		$(document).on('touchend mousedown', '#right', function (event) {
-			event.preventDefault();
+        });
+
+		$("#right").on("tapstart", function(event) {
+            event.preventDefault();
 			pacman.directionWatcher.set(right);
-		});
+        });
 
 		// Menu
 		$(document).on('click', '.button#newGame', function (event) {
